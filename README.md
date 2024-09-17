@@ -25,10 +25,37 @@ Funcionalidades a Modelar
 # 1. Diagrama
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+classDiagram
+Iphone --> ReprodutorMusical
+Iphone --> AparelhoTelefonico
+Iphone --> Navegador
+
+    class Iphone{
+      +ligar(String numero)
+      +atender()
+      +iniciarCorreioVoz()
+      +tocar()
+      +pausar()
+      +selecionarMusica(String musica)
+      +exibirPagina(String url)
+      +adicionarNovaAba()
+      +atualizarPagina()
+    }
+
+    class ReprodutorMusical{
+      +tocar()
+      +pausar()
+      +selecionarMusica(String musica)
+    }
+    class AparelhoTelefonico{
+      +ligar(String numero)
+      +atender()
+      +iniciarCorreioVoz()
+    }
+    class Navegador{
+      +exibirPagina(String url)
+      +adicionarNovaAba()
+      +atualizarPagina()
+    }
 ```
     
